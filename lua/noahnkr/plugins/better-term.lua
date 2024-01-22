@@ -7,7 +7,7 @@ return {
     vim.keymap.set({"n"}, "<leader>tt", betterTerm.select, { desc = "Select terminal"})
     local current = 2
     vim.keymap.set(
-      {"n"}, "<leader>tn",
+      {"n"}, "<leader>tm",
       function()
         betterTerm.open(current)
         current = current + 1

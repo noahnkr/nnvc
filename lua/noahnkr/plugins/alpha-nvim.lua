@@ -1,44 +1,42 @@
 return {
-  "goolord/alpha-nvim",
-  event = "VimEnter",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    local alpha = require("alpha")
-    local dashboard = require("alpha.themes.dashboard")
+	"goolord/alpha-nvim",
+	event = "VimEnter",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	config = function()
+		local alpha = require("alpha")
+		local dashboard = require("alpha.themes.dashboard")
 
-    dashboard.section.header.val = {
-      "         o",
-      "      O o",
-      "          o                __",
-      "        O   ___======____=---=)",
-      "           /T             \\_--===)",
-      "           [ \\ (0)   \\~     \\_-==)      " .. os.date(),
-      "            \\      / )J~~     \\-=)       ",
-      "             \\\\___/  )JJ~~     \\)       ",
-      "              \\_____/JJJ~~~~     \\",
-      "              / \\  , \\\\J~~~~~     \\",
-      "             (-\\)\\=|\\\\\\~~~~        L__",
-      "             (\\\\)  (\\\\\\)_            \\==__",
-      "              \\V    \\\\\\) ===_____    \\\\\\\\\\\\",
-      "                     \\V)     \\_) \\\\\\\\JJ\\J\\)",
-      "                                 /J\\JT\\JJJJ)",
-      "                                 (JJJ| \\UUU)",
-      "                                  (UU)"
-    }
+		dashboard.section.header.val = {
+			"         o",
+			"      O o",
+			"          o                __",
+			"        O   ___======____=---=)",
+			"           /T             \\_--===)",
+			"           [ \\ (0)   \\~     \\_-==)      " .. os.date(),
+			"            \\      / )J~~     \\-=)       ",
+			"             \\\\___/  )JJ~~     \\)       ",
+			"              \\_____/JJJ~~~~     \\",
+			"              / \\  , \\\\J~~~~~     \\",
+			"             (-\\)\\=|\\\\\\~~~~        L__",
+			"             (\\\\)  (\\\\\\)_            \\==__",
+			"              \\V    \\\\\\) ===_____    \\\\\\\\\\\\",
+			"                     \\V)     \\_) \\\\\\\\JJ\\J\\)",
+			"                                 /J\\JT\\JJJJ)",
+			"                                 (JJJ| \\UUU)",
+			"                                  (UU)",
+		}
 
-    dashboard.section.buttons.val = {
-      dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
-      dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
-      dashboard.button("SPC ff", "󰱼 > Find File", "<cmd>Telescope find_files<CR>"),
-      dashboard.button("SPC fs", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
-      dashboard.button("SPC wr", "󰁯  > Restore Session For Current Directory", "<cmd>SessionRestore<CR>"),
-      dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
-    }
+		dashboard.section.buttons.val = {
+			dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
+			dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
+			dashboard.button("SPC ff", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
+			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
+		}
 
-    -- Send config to alpha
-    alpha.setup(dashboard.opts)
+		-- Send config to alpha
+		alpha.setup(dashboard.opts)
 
-    -- Disable folding on alpha buffer
-    vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
-  end,
+		-- Disable folding on alpha buffer
+		vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+	end,
 }

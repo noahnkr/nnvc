@@ -1,7 +1,7 @@
 return {
 	"m4xshen/autoclose.nvim",
 	config = function()
-		local config = {
+		require("autoclose").setup({
 			keys = {
 				["("] = { escape = false, close = true, pair = "()" },
 				["["] = { escape = false, close = true, pair = "[]" },
@@ -24,6 +24,6 @@ return {
 				auto_indent = true,
 				disable_command_mode = false,
 			},
-		}
+		})
 	end,
 }

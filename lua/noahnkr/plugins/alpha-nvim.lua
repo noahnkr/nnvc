@@ -6,28 +6,26 @@ return {
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
-    -- Set header
     dashboard.section.header.val = {
-      "                                                     ",
-      "                                                     ",
-      "                 ___                                 ",
-      "  ___======____=---=)                                ",
-      "/T             \\_--===)                             ",
-      "[ \\ (0)   \\~     \\_-==)                           ",
-      " \\      / )J~~     \\-=)       \"Give a man code and you solve his problem for a day,",
-      "  \\\\___/  )JJ~~     \\)         Teach a man to code and he'll be debugging for a lifetime.\"",
-      "   \\_____/JJJ~~~~     \\                            ",
-      "   / \\  , \\\\J~~~~~     \\                             ",
-      "  (-\\)\\=|\\\\\\~~~~        L__                            ",
-      "  (\\\\)  (\\\\\\)_            \\==__                      ",
-      "   \\V    \\\\\\) ===_____    \\\\\\\\\\\\                      ",
-      "          \\V)     \\_) \\\\\\\\JJ\\J\\)                      ",
-      "                      /J\\JT\\JJJJ)                     ",
-      "                      (JJJ| \\UUU)                     ",
-      "                       (UU)                           "
+      "         o",
+      "      O o",
+      "          o                __",
+      "        O   ___======____=---=)",
+      "           /T             \\_--===)",
+      "           [ \\ (0)   \\~     \\_-==)      " .. os.date(),
+      "            \\      / )J~~     \\-=)       ",
+      "             \\\\___/  )JJ~~     \\)       ",
+      "              \\_____/JJJ~~~~     \\",
+      "              / \\  , \\\\J~~~~~     \\",
+      "             (-\\)\\=|\\\\\\~~~~        L__",
+      "             (\\\\)  (\\\\\\)_            \\==__",
+      "              \\V    \\\\\\) ===_____    \\\\\\\\\\\\",
+      "                     \\V)     \\_) \\\\\\\\JJ\\J\\)",
+      "                                 /J\\JT\\JJJJ)",
+      "                                 (JJJ| \\UUU)",
+      "                                  (UU)"
     }
 
-    -- Set menu
     dashboard.section.buttons.val = {
       dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
       dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),

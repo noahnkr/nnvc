@@ -1,8 +1,7 @@
 return {
 	"mawkler/modicator.nvim",
 	dependencies = "marko-cerovac/material.nvim",
-	init = function()
-		-- These are required for Modicator to work
+	config = function()
 		vim.o.cursorline = true
 		vim.o.number = true
 		vim.o.termguicolors = true

@@ -9,14 +9,14 @@ return {
 		dashboard.section.header.val = {
 			"         o",
 			"      O o",
-			"          o                __",
+			"          o                ___",
 			"        O   ___======____=---=)",
 			"           /T             \\_--===)",
 			"           [ \\ (0)   \\~     \\_-==)      " .. os.date(),
 			"            \\      / )J~~     \\-=)       ",
 			"             \\\\___/  )JJ~~     \\)       ",
 			"              \\_____/JJJ~~~~     \\",
-			"              / \\  , \\\\J~~~~~     \\",
+			"              / \\  , \\J~~~~~      \\",
 			"             (-\\)\\=|\\\\\\~~~~        L__",
 			"             (\\\\)  (\\\\\\)_            \\==__",
 			"              \\V    \\\\\\) ===_____    \\\\\\\\\\\\",
@@ -28,15 +28,14 @@ return {
 
 		dashboard.section.buttons.val = {
 			dashboard.button("; ee", "  > New File", "<cmd>ene<CR>"),
+			dashboard.button("; rr", "󰈢  > Recent files", ":Oldfiles<CR>"),
 			dashboard.button("; ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
 			dashboard.button("; ff", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
+			dashboard.button("; cc", "  > Edit Config", ":e ~/AppData/Local/nvim/<CR>"),
 			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
 		}
 
-		-- Send config to alpha
 		alpha.setup(dashboard.opts)
-
-		-- Disable folding on alpha buffer
 		vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
 	end,
 }

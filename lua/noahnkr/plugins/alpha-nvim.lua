@@ -27,8 +27,8 @@ return {
 		}
 
 		dashboard.section.buttons.val = {
-			dashboard.button("; ee", "  > New File", "<cmd>ene<CR>"),
-			dashboard.button("; rr", "󰈢  > Recent files", ":Oldfiles<CR>"),
+			dashboard.button("; nn", "  > New File", "<cmd>ene<CR>"),
+			dashboard.button("; rr", "󰈢  > Recent files", "<cmd>Telescope oldfiles<CR>"),
 			dashboard.button("; ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
 			dashboard.button("; ff", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
 			dashboard.button("; cc", "  > Edit Config", ":e ~/AppData/Local/nvim/<CR>"),

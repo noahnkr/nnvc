@@ -1,3 +1,0 @@
-return {
-	"gpanders/vim-oldfiles",
-}
